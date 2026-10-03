@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#EBDCC8"/>
+  <ellipse cx="206" cy="162" rx="128" ry="128" fill="#000" opacity=".07"/>
+  <circle cx="200" cy="152" r="124" fill="#FFFDF8"/>
+  <circle cx="200" cy="152" r="100" fill="none" stroke="#EFE4D6" stroke-width="3"/>
+  <!-- tajada de torta -->
+  <path d="M120 196L250 96l40 100z" fill="#8A5A34"/>
+  <path d="M120 196h170v-20H146z" fill="#F3E2C3"/>
+  <path d="M120 176h170l-8-22H152z" fill="#8A5A34"/>
+  <path d="M152 154h130l-8-20H176z" fill="#E9C994"/>
+  <path d="M176 134h98l-24-38z" fill="#6E4426"/>
+  <path d="M120 196h170" stroke="#6E4426" stroke-width="4"/>
+  <!-- castañas -->
+  <g fill="#7A4B27">
+    <path d="M232 92c6-12 22-12 26 2-8 6-18 6-26-2z"/>
+    <path d="M300 206c8-10 24-8 26 6-10 6-20 4-26-6z"/>
+    <path d="M100 120c6-12 22-12 26 2-8 6-18 6-26-2z"/>
+  </g>
+  <!-- manjar -->
+  <path d="M150 226c20-8 50 8 80-2s50 4 66-2" stroke="#C98B3A" stroke-width="7" stroke-linecap="round" fill="none"/>
+</svg>

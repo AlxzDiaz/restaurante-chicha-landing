@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F3D6AE"/>
+  <ellipse cx="206" cy="162" rx="128" ry="128" fill="#000" opacity=".07"/>
+  <circle cx="200" cy="152" r="124" fill="#FFFDF8"/>
+  <circle cx="200" cy="152" r="100" fill="none" stroke="#EFE4D6" stroke-width="3"/>
+  <!-- hoja de bijao -->
+  <path d="M92 176C118 92 238 66 316 120 262 188 160 214 92 176z" fill="#4E8B3A"/>
+  <path d="M96 174L312 122" stroke="#3A6C2A" stroke-width="3"/>
+  <!-- pescado a la parrilla -->
+  <path d="M130 150c30-38 104-40 136 0-32 40-106 38-136 0z" fill="#D9A066"/>
+  <path d="M266 150l34-24v48z" fill="#C88A4E"/>
+  <g stroke="#9C6531" stroke-width="5" stroke-linecap="round" opacity=".7">
+    <path d="M165 128l-12 44M195 124l-12 52M225 126l-12 48"/>
+  </g>
+  <circle cx="146" cy="146" r="4" fill="#4A2E14"/>
+  <!-- limón y patacones -->
+  <circle cx="300" cy="200" r="20" fill="#9CC94B"/>
+  <circle cx="300" cy="200" r="13" fill="#C9E487"/>
+  <circle cx="120" cy="214" r="22" fill="#E7B54A"/>
+  <circle cx="120" cy="214" r="14" fill="#F2CD6B"/>
+  <circle cx="158" cy="226" r="18" fill="#E7B54A"/>
+  <circle cx="158" cy="226" r="11" fill="#F2CD6B"/>
+</svg>

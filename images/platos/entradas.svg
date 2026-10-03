@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F6E1C3"/>
+  <ellipse cx="206" cy="162" rx="128" ry="128" fill="#000" opacity=".07"/>
+  <circle cx="200" cy="152" r="124" fill="#FFFDF8"/>
+  <circle cx="200" cy="152" r="100" fill="none" stroke="#EFE4D6" stroke-width="3"/>
+  <!-- patacones -->
+  <g>
+    <circle cx="150" cy="118" r="30" fill="#E2A93E"/><circle cx="150" cy="118" r="20" fill="#F2CD6B"/>
+    <circle cx="206" cy="102" r="28" fill="#E2A93E"/><circle cx="206" cy="102" r="18" fill="#F2CD6B"/>
+    <circle cx="128" cy="172" r="28" fill="#E2A93E"/><circle cx="128" cy="172" r="18" fill="#F2CD6B"/>
+    <circle cx="184" cy="160" r="30" fill="#E2A93E"/><circle cx="184" cy="160" r="20" fill="#F2CD6B"/>
+    <circle cx="160" cy="214" r="26" fill="#E2A93E"/><circle cx="160" cy="214" r="17" fill="#F2CD6B"/>
+  </g>
+  <!-- ají de cocona -->
+  <circle cx="262" cy="182" r="44" fill="#F4EDE3"/>
+  <circle cx="262" cy="182" r="34" fill="#F0A13B"/>
+  <g fill="#D9481F"><circle cx="252" cy="172" r="5"/><circle cx="270" cy="190" r="4"/><circle cx="268" cy="168" r="3"/></g>
+  <g fill="#3E8E3A"><circle cx="256" cy="194" r="4"/><circle cx="276" cy="176" r="3"/></g>
+  <path d="M232 98c18-20 46-18 56 4" stroke="#4E8B3A" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

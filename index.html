@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- SEO: cambia título, descripción e imagen por cada cliente -->
+  <title>Sabor Amazónico · Comida amazónica en Puerto Maldonado | Pide por WhatsApp</title>
+  <meta name="description" content="Juane, tacacho, paiche y patarashca en Puerto Maldonado. Mira la carta con fotos y pide por WhatsApp: delivery en 30–40 min, pago con Yape o Plin.">
+  <meta name="theme-color" content="#141012">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Sabor Amazónico · Puerto Maldonado">
+  <meta property="og:description" content="Con la actuación estelar del Juane, la Patarashca y los Patacones. ¡Pide por WhatsApp!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1783408356251-f4953f943bb2?auto=format&fit=crop&w=1200&h=630&q=70">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografías: Bungee (letras de cartel) + Archivo (texto) + IBM Plex Mono (comanda) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Bungee&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Íconos: Remix Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#carta">Saltar a la carta</a>
+
+  <!-- ============ TICKER (anuncios en movimiento) ============ -->
+  <div class="ticker" aria-hidden="true"><div class="ticker__pista" id="ticker"></div></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Inicio">
+        <img src="images/logo.svg" width="46" height="46" alt="">
+        <span class="logo__nombre" data-logo>Sabor Amazónico</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#carta">La carta</a></li>
+          <li><a href="#historia">Historia</a></li>
+          <li><a href="#dedicatorias">Dedicatorias</a></li>
+          <li><a href="#fechas">Horarios</a></li>
+        </ul>
+      </nav>
+
+      <button class="comanda-btn" id="comanda-btn" type="button" aria-label="Ver mi comanda">
+        <i class="ri-file-list-3-fill" aria-hidden="true"></i><span class="comanda-btn__txt">Comanda</span>
+        <span class="comanda-btn__n" id="comanda-n" hidden>0</span>
+      </button>
+      <a class="btn btn--wa btn--sm header__wa" data-wa href="#"><i class="ri-whatsapp-fill" aria-hidden="true"></i><span>Pedir</span></a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
+        <i class="ri-menu-4-line ico-abrir" aria-hidden="true"></i><i class="ri-close-line ico-cerrar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ CARTEL (hero estilo afiche chicha) ============ -->
+    <section class="cartel" id="inicio">
+      <div class="container cartel__grid">
+        <div class="cartel__texto">
+          <p class="cartel__presenta" data-anim="hero"><i class="ri-star-fill" aria-hidden="true"></i> <span id="presenta"></span> <i class="ri-star-fill" aria-hidden="true"></i></p>
+          <h1 class="cartel__titulo">
+            <span class="l1" data-anim="hero">El sabor</span>
+            <span class="l2" data-anim="hero">de la</span>
+            <span class="l3" data-anim="hero">Amazonía</span>
+          </h1>
+          <div class="lineup" data-anim="hero">
+            <p class="lineup__label">Con la actuación estelar de:</p>
+            <ul class="lineup__lista" id="lineup"></ul>
+            <p class="lineup__invitado">y el invitado de honor: <strong id="invitado"></strong></p>
+          </div>
+          <div class="cartel__acciones" data-anim="hero">
+            <a class="btn btn--amarillo btn--lg" href="#carta"><i class="ri-restaurant-2-fill" aria-hidden="true"></i>Ver la carta</a>
+            <a class="btn btn--wa btn--lg" data-wa href="#"><i class="ri-whatsapp-fill" aria-hidden="true"></i>Pedir por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="cartel__visual" id="cartel-visual">
+          <figure class="afiche-foto">
+            <!-- Foto destacada: cámbiala por el plato estrella del cliente -->
+            <img src="https://images.unsplash.com/photo-1783408356251-f4953f943bb2?auto=format&fit=crop&w=800&q=70"
+                 data-fallback="images/platos/fondos.svg" alt="Pescado a la parrilla con plátano frito y limón" width="560" height="680" fetchpriority="high">
+          </figure>
+          <div class="estallido estallido--hero" aria-hidden="true">
+            <small>Estelar</small><strong id="estrella-precio"></strong><small id="estrella-nombre"></small>
+          </div>
+          <a class="rating-sticker" id="rating" href="#dedicatorias"></a>
+        </div>
+      </div>
+
+      <div class="cartel__barra">
+        <div class="container cartel__info">
+          <span class="neon" id="neon" role="status"></span>
+          <span><i class="ri-time-fill" aria-hidden="true"></i><span id="estado-texto"></span></span>
+          <span><i class="ri-motorbike-fill" aria-hidden="true"></i>Delivery <span id="delivery-tiempo"></span></span>
+          <span><i class="ri-wallet-3-fill" aria-hidden="true"></i><span id="pagos-corto"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUNCIÓN ESTELAR (combo del día) ============ -->
+    <section class="seccion seccion--papel" id="combo">
+      <div class="container">
+        <article class="estelar" data-anim>
+          <div class="estelar__media">
+            <img id="combo-img" alt="" loading="lazy" decoding="async" data-fallback="images/platos/fondos.svg">
+            <span class="estallido estallido--combo"><small>Ahorra</small><strong id="combo-ahorro"></strong></span>
+          </div>
+          <div class="estelar__texto">
+            <span class="etiqueta etiqueta--rosa"><i class="ri-fire-fill" aria-hidden="true"></i> Función estelar del día</span>
+            <h2 class="titulo titulo--claro" id="combo-nombre"></h2>
+            <p id="combo-desc"></p>
+            <div class="estelar__precio">
+              <strong id="combo-precio"></strong>
+              <s id="combo-antes"></s>
+            </div>
+            <button class="btn btn--rosa btn--lg" id="combo-agregar" type="button"><i class="ri-add-line" aria-hidden="true"></i>¡Lo quiero!</button>
+            <p class="nota"><i class="ri-time-line" aria-hidden="true"></i> Solo por hoy, hasta agotar stock.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LA CARTA ============ -->
+    <section class="seccion seccion--papel seccion--puntos" id="carta">
+      <div class="container">
+        <header class="cabecera" data-anim>
+          <span class="etiqueta etiqueta--amarillo"><i class="ri-music-2-fill" aria-hidden="true"></i> El repertorio</span>
+          <h2 class="titulo titulo--claro">La carta</h2>
+          <p>Elige tus temas favoritos, arma tu comanda y te la enviamos lista por WhatsApp.</p>
+        </header>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+        <ul class="platos" id="platos"></ul>
+      </div>
+    </section>
+
+    <!-- ============ HISTORIA (cassette, lado A) ============ -->
+    <section class="seccion seccion--noche seccion--rayos" id="historia">
+      <div class="container historia">
+        <div class="historia__media" data-anim>
+          <figure class="foto-cinta">
+            <!-- Foto del local o del equipo del cliente -->
+            <img src="https://images.unsplash.com/photo-1636405189493-181ecf851006?auto=format&fit=crop&w=900&q=70"
+                 data-fallback="images/local.svg" alt="Salón del restaurante con plantas y mesas de madera" loading="lazy" decoding="async" width="900" height="1000">
+            <figcaption>Nuestra casa · <span data-config="ciudad"></span></figcaption>
+          </figure>
+        </div>
+        <div class="historia__texto" data-anim>
+          <div class="cassette" aria-hidden="true">
+            <div class="cassette__etiqueta"><span>Lado A</span><strong data-config="nombre"></strong><span>Grandes éxitos</span></div>
+            <div class="cassette__ventana"><span class="carrete"></span><span class="cassette__cinta"></span><span class="carrete"></span></div>
+          </div>
+          <h2 class="titulo titulo--oscuro">Nuestra historia</h2>
+          <ol class="tracklist" id="tracklist"></ol>
+          <ul class="logros" id="logros"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EN VIVO DESDE LA COCINA (galería) ============ -->
+    <section class="seccion seccion--noche galeria-sec" id="galeria">
+      <div class="container">
+        <header class="cabecera" data-anim>
+          <span class="etiqueta etiqueta--rec"><span class="rec" aria-hidden="true"></span> En vivo</span>
+          <h2 class="titulo titulo--oscuro">Desde la cocina</h2>
+          <p>Síguenos en Instagram <a id="ig-link" href="#" target="_blank" rel="noopener"></a> y entérate del plato del día.</p>
+        </header>
+      </div>
+      <div class="pelicula" id="pelicula" aria-label="Galería de fotos"></div>
+    </section>
+
+    <!-- ============ DEDICATORIAS (opiniones) ============ -->
+    <section class="seccion seccion--papel" id="dedicatorias">
+      <div class="container">
+        <header class="cabecera" data-anim>
+          <span class="etiqueta etiqueta--verde"><i class="ri-radio-fill" aria-hidden="true"></i> <span class="al-aire">Al aire</span></span>
+          <h2 class="titulo titulo--claro">La hora de las dedicatorias</h2>
+          <p>Lo que dicen nuestros comensales. Saludos para todos ellos.</p>
+        </header>
+        <div class="resumen-rating" id="resumen-rating" data-anim></div>
+        <ul class="dedicatorias" id="testimonios"></ul>
+      </div>
+    </section>
+
+    <!-- ============ PRÓXIMAS FECHAS (horario + ubicación) ============ -->
+    <section class="seccion seccion--noche" id="fechas">
+      <div class="container">
+        <header class="cabecera" data-anim>
+          <span class="etiqueta etiqueta--cian"><i class="ri-calendar-event-fill" aria-hidden="true"></i> Gira permanente</span>
+          <h2 class="titulo titulo--oscuro">Próximas fechas</h2>
+          <p>Todas las semanas, en el mismo escenario.</p>
+        </header>
+        <ul class="fechas" id="fechas-lista" data-anim></ul>
+        <div class="escenario" data-anim>
+          <div class="escenario__info">
+            <h3><i class="ri-map-pin-2-fill" aria-hidden="true"></i> El escenario</h3>
+            <p class="direccion" id="direccion"></p>
+            <h3><i class="ri-wallet-3-fill" aria-hidden="true"></i> Entradas con</h3>
+            <ul class="pagos" id="pagos"></ul>
+            <a class="btn btn--amarillo" id="como-llegar" href="#" target="_blank" rel="noopener"><i class="ri-navigation-fill" aria-hidden="true"></i>Cómo llegar</a>
+          </div>
+          <iframe class="mapa" id="mapa" title="Mapa de ubicación del restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE ============ -->
+    <section class="cierre seccion--rayos">
+      <div class="container cierre__inner" data-anim>
+        <p class="cierre__pre">¿Se te antojó?</p>
+        <h2 class="cierre__titulo">¡Pide ya!</h2>
+        <p>Te respondemos en minutos. Llega calientito.</p>
+        <a class="btn btn--wa btn--lg" data-wa href="#"><i class="ri-whatsapp-fill" aria-hidden="true"></i>Hacer mi pedido</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <p class="footer__marca" data-logo>Sabor Amazónico</p>
+      <div class="footer__grid">
+        <div>
+          <h3>Horario</h3>
+          <ul class="footer__lista" id="footer-horarios"></ul>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer__lista">
+            <li><i class="ri-phone-fill" aria-hidden="true"></i><a id="tel" href="#"><span data-config="telefono"></span></a></li>
+            <li><i class="ri-whatsapp-fill" aria-hidden="true"></i><a data-wa href="#">Escríbenos por WhatsApp</a></li>
+            <li><i class="ri-map-pin-2-fill" aria-hidden="true"></i><span id="footer-direccion"></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Síguenos</h3>
+          <div class="redes">
+            <a data-red="facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ri-facebook-circle-fill" aria-hidden="true"></i></a>
+            <a data-red="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-fill" aria-hidden="true"></i></a>
+            <a data-red="tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© <span id="anio">2026</span> <span data-config="nombre"></span>. Todos los derechos reservados.</span>
+        <span>Hecho con sazón en Puerto Maldonado <i class="ri-fire-fill" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE DE WHATSAPP ============ -->
+  <a class="fab" data-wa href="#" aria-label="Escríbenos por WhatsApp"><i class="ri-whatsapp-fill" aria-hidden="true"></i></a>
+
+  <!-- ============ TICKET FLOTANTE (aparece con pedido) ============ -->
+  <button class="ticket-barra" id="barra" type="button" hidden>
+    <span class="ticket-barra__n" id="barra-n">0</span>
+    <span class="ticket-barra__txt">Ver comanda</span>
+    <strong id="barra-total"></strong>
+    <i class="ri-arrow-right-line" aria-hidden="true"></i>
+  </button>
+
+  <!-- ============ COMANDA (drawer con forma de ticket) ============ -->
+  <dialog class="comanda" id="drawer" aria-labelledby="ticket-titulo">
+    <form class="ticket" id="form-pedido" novalidate>
+      <button class="ticket__cerrar" type="button" id="drawer-cerrar" aria-label="Cerrar"><i class="ri-close-line" aria-hidden="true"></i></button>
+
+      <header class="ticket__head">
+        <img src="images/logo.svg" width="48" height="48" alt="">
+        <h2 id="ticket-titulo" data-config="nombre"></h2>
+        <p id="ticket-dir"></p>
+        <p class="ticket__meta">Comanda N° <b id="ticket-n"></b> · <span id="ticket-fecha"></span></p>
+      </header>
+
+      <div class="ticket__sep"></div>
+      <ul class="ticket__items" id="items"></ul>
+      <p class="ticket__vacio" id="vacio" hidden>Tu comanda está vacía.<br>¡Agrega algo rico de la carta!</p>
+      <div class="ticket__sep"></div>
+
+      <fieldset class="ticket__entrega">
+        <legend>Entrega</legend>
+        <label><input type="radio" name="entrega" value="Delivery" checked><span><i class="ri-motorbike-fill" aria-hidden="true"></i>Delivery</span></label>
+        <label><input type="radio" name="entrega" value="Recojo en local"><span><i class="ri-store-2-fill" aria-hidden="true"></i>Recojo</span></label>
+      </fieldset>
+
+      <label class="ticket__campo"><span>Nombre</span><input name="nombre" autocomplete="name" required placeholder="Ana Torres"></label>
+      <label class="ticket__campo" id="campo-direccion"><span>Dirección</span><input name="direccion" autocomplete="street-address" placeholder="Calle, número y referencia"></label>
+      <label class="ticket__campo"><span>Pago</span><select name="pago" id="select-pago"></select></label>
+      <label class="ticket__campo"><span>Notas</span><input name="notas" placeholder="Sin ají, con cubiertos…"></label>
+
+      <div class="ticket__sep"></div>
+      <dl class="ticket__totales">
+        <div><dt>Subtotal</dt><dd id="t-subtotal"></dd></div>
+        <div id="fila-envio"><dt>Envío</dt><dd id="t-envio"></dd></div>
+        <div class="ticket__total"><dt>Total</dt><dd id="t-total"></dd></div>
+      </dl>
+      <p class="ticket__aviso" id="aviso-envio"></p>
+
+      <button class="btn btn--wa btn--lg btn--bloque" type="submit" id="enviar"><i class="ri-whatsapp-fill" aria-hidden="true"></i>Enviar comanda</button>
+      <div class="ticket__barras" aria-hidden="true"></div>
+      <p class="ticket__gracias">¡Gracias, causa! Vuelve pronto</p>
+    </form>
+  </dialog>
+
+  <!-- ============ AVISO (toast) ============ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Librerías: GSAP + ScrollTrigger (animaciones) y canvas-confetti (celebración al enviar) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

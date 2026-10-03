@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F8D9CF"/>
+  <ellipse cx="200" cy="262" rx="90" ry="14" fill="#000" opacity=".08"/>
+  <!-- sorbete -->
+  <path d="M222 40l-26 120" stroke="#2D3436" stroke-width="8" stroke-linecap="round"/>
+  <!-- vaso -->
+  <path d="M136 70h128l-16 186a12 12 0 0 1-12 11h-72a12 12 0 0 1-12-11z" fill="#FFFFFF" fill-opacity=".55" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M146 112h108l-12 140a8 8 0 0 1-8 7h-68a8 8 0 0 1-8-7z" fill="#D94A68"/>
+  <path d="M146 112h108l-2 22H148z" fill="#E8708A"/>
+  <!-- hielo -->
+  <rect x="166" y="132" width="30" height="30" rx="6" fill="#FFFFFF" opacity=".5" transform="rotate(-12 181 147)"/>
+  <rect x="204" y="150" width="26" height="26" rx="6" fill="#FFFFFF" opacity=".45" transform="rotate(14 217 163)"/>
+  <!-- rodaja de limón -->
+  <circle cx="258" cy="76" r="30" fill="#9CC94B"/>
+  <circle cx="258" cy="76" r="22" fill="#D7EC9C"/>
+  <g stroke="#9CC94B" stroke-width="3"><path d="M258 54v44M236 76h44M242 60l32 32M274 60l-32 32"/></g>
+  <!-- camu camu -->
+  <circle cx="102" cy="236" r="18" fill="#B3243F"/>
+  <circle cx="132" cy="250" r="14" fill="#C7334F"/>
+  <circle cx="298" cy="244" r="16" fill="#B3243F"/>
+</svg>

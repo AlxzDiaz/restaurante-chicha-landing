@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7C59F"/>
+      <stop offset="1" stop-color="#FCE6D2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cielo)"/>
+  <circle cx="620" cy="150" r="60" fill="#E17055" opacity=".6"/>
+  <!-- selva al fondo -->
+  <path d="M0 360c60-50 120-40 170-10 40-50 110-60 160-20 50-40 130-40 180 0 50-30 120-40 170 0 50-30 90-20 120 0v270H0z" fill="#3D7A57"/>
+  <path d="M0 420c80-30 160-20 230 10 70-30 170-30 250 0 80-25 200-25 320 0v190H0z" fill="#2B5D42"/>
+  <!-- piso -->
+  <rect y="470" width="800" height="130" fill="#C49A6C"/>
+  <!-- maloca: techo de hoja de palmera -->
+  <path d="M150 300L400 150l250 150z" fill="#A87A3D"/>
+  <g stroke="#8C6230" stroke-width="4">
+    <path d="M190 290L400 165M240 296L400 180M300 300L400 196M610 290L400 165M560 296L400 180M500 300L400 196"/>
+  </g>
+  <path d="M140 300h520l-14 20H154z" fill="#8C6230"/>
+  <!-- postes -->
+  <g fill="#6E4A24"><rect x="180" y="318" width="16" height="160"/><rect x="392" y="318" width="16" height="160"/><rect x="604" y="318" width="16" height="160"/></g>
+  <!-- mesas -->
+  <g>
+    <rect x="236" y="420" width="120" height="12" rx="4" fill="#5A3A1C"/>
+    <rect x="290" y="432" width="12" height="44" fill="#5A3A1C"/>
+    <rect x="446" y="420" width="120" height="12" rx="4" fill="#5A3A1C"/>
+    <rect x="500" y="432" width="12" height="44" fill="#5A3A1C"/>
+    <circle cx="270" cy="410" r="12" fill="#E17055"/>
+    <circle cx="520" cy="410" r="12" fill="#00B894"/>
+  </g>
+  <!-- lámparas -->
+  <g stroke="#2D3436" stroke-width="2"><path d="M296 320v40M506 320v40"/></g>
+  <g fill="#F2CD6B"><path d="M282 360h28l-6 14h-16z"/><path d="M492 360h28l-6 14h-16z"/></g>
+  <!-- plantas -->
+  <g fill="#3E8E3A">
+    <path d="M90 480c-10-40 0-80 20-100 0 40-6 70-20 100z"/>
+    <path d="M90 480c20-30 50-50 80-50-20 25-50 40-80 50z"/>
+    <path d="M710 480c10-40 0-80-20-100 0 40 6 70 20 100z"/>
+    <path d="M710 480c-20-30-50-50-80-50 20 25 50 40 80 50z"/>
+  </g>
+</svg>
